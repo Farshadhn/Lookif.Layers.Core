@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Farshad</Authors>
+    <Product>Main Entities Related to "Lookif template"</Product>
+    <Description>Main Entities Related to "Lookif template".
+</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Farshadhn/Lookif.Layers.Core</RepositoryUrl>
+    <PackageReleaseNotes>Main Entities Related to "Lookif template"</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lookif.Library.Common" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.8" />
+  </ItemGroup>
+
+</Project>
