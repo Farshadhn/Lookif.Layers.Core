@@ -1,6 +1,6 @@
 ﻿
-using ESS.Lookif.Library.Common.Enums;
 using Lookif.Layers.Core.MainCore.Base;
+using Lookif.Library.Common.Enums;
 using Lookif.Library.Common.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
