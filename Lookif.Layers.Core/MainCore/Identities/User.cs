@@ -30,8 +30,7 @@ namespace Lookif.Layers.Core.MainCore.Identities
         public int Age { get; set; }
         public GenderType Gender { get; set; }
         public bool IsActive { get; set; }
-        public DateTimeOffset? LastLoginDate { get; set; }
-        public DateTime InsertedDateTime { get; set; }
+        public DateTimeOffset? LastLoginDate { get; set; } 
         public DateTime LastEditedDateTime { get; set; } 
         public bool IsDeleted { get; set; }
         [NotMapped]
@@ -41,9 +40,7 @@ namespace Lookif.Layers.Core.MainCore.Identities
         [NotMapped]
         public bool IsInRole { get; set; }
 
-        public bool Block { get; set; }
-        public Guid? CreatorId { get; set; }
-        public User Creator { get; set; }
+        public bool Block { get; set; } 
         public Guid? LastEditedUserId { get; set; }
         public User LastEditedUser { get; set; }
         public string YaasPersonnelId{ get; set; }
@@ -57,16 +54,16 @@ namespace Lookif.Layers.Core.MainCore.Identities
         }
     }
 
-    public class UserConfiguration : IEntityTypeConfiguration<User>
-    {
-        public void Configure(EntityTypeBuilder<User> builder)
-        {
-            builder
-               .HasOne(a => a.LastEditedUser)
-               .WithOne(a => a.Creator);
+    //public class UserConfiguration : IEntityTypeConfiguration<User>
+    //{
+    //    public void Configure(EntityTypeBuilder<User> builder)
+    //    {
+    //        builder
+    //           .HasOne(a => a.LastEditedUser)
+    //           .WithOne(a => a.Creator);
 
-        }
-    }
+    //    }
+    //}
 
    
 }

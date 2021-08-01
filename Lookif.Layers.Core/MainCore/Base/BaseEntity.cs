@@ -13,12 +13,9 @@ namespace Lookif.Layers.Core.MainCore.Base
     }
     public interface IEntity<TKey> : IEntity
     {
-        public TKey Id { get; set; }
-        public DateTime InsertedDateTime { get; set; } // The time that is created 
+        public TKey Id { get; set; } 
         public DateTime LastEditedDateTime { get; set; } //The time that last change is happened
-        public Guid? CreatorId { get; set; }
-        public User Creator { get; set; }
-
+ 
 
         public Guid? LastEditedUserId { get; set; }
         public User LastEditedUser { get; set; }
@@ -31,19 +28,14 @@ namespace Lookif.Layers.Core.MainCore.Base
     {
         protected BaseEntity()
         {
-            var now = DateTime.Now;
-            InsertedDateTime = now;
+            var now = DateTime.Now; 
             LastEditedDateTime = now;
         }
 
-        public TKey Id { get; set; }
-        public DateTime InsertedDateTime { get; set; }
+        public TKey Id { get; set; } 
         public DateTime LastEditedDateTime { get; set; }
 
-
-        public Guid? CreatorId { get; set; }
-        [ForeignKey(nameof(CreatorId))]
-        public virtual User Creator { get; set; }
+         
 
 
         public Guid? LastEditedUserId { get; set; }
