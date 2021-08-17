@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lookif.Library.Common" Version="1.0.5" />
+    <PackageReference Include="Lookif.Library.Common" Version="1.0.6" />
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.8" />
   </ItemGroup>
 
