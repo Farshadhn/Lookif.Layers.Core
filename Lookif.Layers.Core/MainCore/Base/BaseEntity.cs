@@ -1,21 +1,21 @@
-﻿using Lookif.Layers.Core.MainCore.Identities;
+﻿
+using Lookif.Layers.Core.MainCore.Identities;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lookif.Layers.Core.MainCore.Base
 {
+    /// <summary>
+    /// This is used to tag all entities
+    /// </summary>
     public interface IEntity
     {
     }
     public interface IEntity<TKey> : IEntity
     {
-        public TKey Id { get; set; } 
+        public TKey Id { get; set; }
         public DateTime LastEditedDateTime { get; set; } //The time that last change is happened
- 
+
 
         public Guid? LastEditedUserId { get; set; }
         public User LastEditedUser { get; set; }
@@ -23,7 +23,6 @@ namespace Lookif.Layers.Core.MainCore.Base
 
         public bool IsDeleted { get; set; }//All users are stored via integer keys
     }
-
     public abstract class BaseEntity<TKey> : IEntity<TKey>
     {
         protected BaseEntity()

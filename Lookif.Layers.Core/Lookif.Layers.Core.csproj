@@ -11,12 +11,17 @@
     <PackageReleaseNotes>Main Entities Related to "Lookif template"</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.6</Version>
+    <Version>1.0.11</Version>
+    <Company>Lookif</Company>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lookif.Library.Common" Version="1.0.6" />
+    <PackageReference Include="Lookif.Library.Common" Version="1.0.12" />
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Else\" />
   </ItemGroup>
 
 </Project>
