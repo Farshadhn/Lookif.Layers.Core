@@ -1,10 +1,6 @@
-﻿
+﻿using Lookif.Layers.Core.Enums;
 using Lookif.Layers.Core.MainCore.Base;
-using Lookif.Library.Common.Enums;
-using Lookif.Library.Common.Utilities;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lookif.Layers.Core.MainCore.Identities
 {
-    public class User : IdentityUser<Guid>, IEntity<Guid>, IValidatableObject
+    public class User : IdentityUser<Guid>, IEntity<Guid>
     {
         public User()
         {
@@ -45,13 +41,7 @@ namespace Lookif.Layers.Core.MainCore.Identities
         public User LastEditedUser { get; set; }
         public string YaasPersonnelId{ get; set; }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        {
-            if (!this.Email.IsValidEmail())
-                yield return new ValidationResult("ایمیل وارد شده صحیح نمی باشد");
-
-
-        }
+   
     }
 
     //public class UserConfiguration : IEntityTypeConfiguration<User>

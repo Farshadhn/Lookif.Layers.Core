@@ -1,8 +1,4 @@
-﻿using Lookif.Layers.Core.MainCore.Base;
-using Lookif.Layers.Core.MainCore.Identities;
-using Lookif.Library.Common;
-using Microsoft.AspNetCore.Identity;
-using System;
+﻿using Lookif.Layers.Core.MainCore.Identities;
 using System.Threading;
 using System.Threading.Tasks;
 
