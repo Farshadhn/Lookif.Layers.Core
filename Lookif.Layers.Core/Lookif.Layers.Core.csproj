@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PrivateAssets>all</PrivateAssets>
     <TargetFramework>net5.0</TargetFramework>
     <Authors>Farshad</Authors>
     <Product>Main Entities Related to "Lookif template"</Product>
@@ -11,8 +12,9 @@
     <PackageReleaseNotes>Main Entities Related to "Lookif template"</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.12</Version>
+    <Version>1.0.14</Version>
     <Company>Lookif</Company>
+    <AssemblyVersion>1.0.14.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

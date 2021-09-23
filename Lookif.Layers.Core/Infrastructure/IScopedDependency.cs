@@ -1,4 +1,4 @@
-﻿namespace Lookif.Layers.Core.Infrastructure.Base.Lookif.Library.Common
+﻿namespace Lookif.Layers.Core.Infrastructure.Base
 {
     //just to mark
     public interface IScopedDependency
