@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lookif.Layers.Core.MainCore.Identities
 {
-    public class User : IdentityUser<Guid>, IEntity<Guid>
+    public abstract class User : IdentityUser<Guid>, IEntity<Guid>
     {
         public User()
         {
@@ -39,22 +39,11 @@ namespace Lookif.Layers.Core.MainCore.Identities
         public bool Block { get; set; } 
         public Guid? LastEditedUserId { get; set; }
         public User LastEditedUser { get; set; }
-        public string YaasPersonnelId{ get; set; }
 
    
     }
 
-    //public class UserConfiguration : IEntityTypeConfiguration<User>
-    //{
-    //    public void Configure(EntityTypeBuilder<User> builder)
-    //    {
-    //        builder
-    //           .HasOne(a => a.LastEditedUser)
-    //           .WithOne(a => a.Creator);
-
-    //    }
-    //}
-
+ 
    
 }
 
