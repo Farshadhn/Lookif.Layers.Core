@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lookif.Layers.Core.MainCore.Identities
 {
-    public abstract class User : IdentityUser<Guid>, IEntity<Guid>
+    public  class User : IdentityUser<Guid>, IEntity<Guid>
     {
         public User()
         {

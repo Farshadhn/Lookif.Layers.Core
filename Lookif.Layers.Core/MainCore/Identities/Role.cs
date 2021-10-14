@@ -11,7 +11,7 @@ using Lookif.Layers.Core.MainCore.Base;
 
 namespace Lookif.Layers.Core.MainCore.Identities
 {
-    public abstract class Role : IdentityRole<Guid>, IEntity
+    public  class Role : IdentityRole<Guid>, IEntity
     { 
         public string Description { get; set; }
     }
