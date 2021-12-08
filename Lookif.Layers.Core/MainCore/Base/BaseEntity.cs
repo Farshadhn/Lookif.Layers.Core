@@ -20,8 +20,7 @@ namespace Lookif.Layers.Core.MainCore.Base
         public Guid? LastEditedUserId { get; set; }
         public User LastEditedUser { get; set; }
 
-
-        public bool IsDeleted { get; set; }//All users are stored via integer keys
+         
     }
     public abstract class BaseEntity<TKey> : IEntity<TKey>
     {
@@ -41,8 +40,7 @@ namespace Lookif.Layers.Core.MainCore.Base
         [ForeignKey(nameof(LastEditedUserId))]
         public virtual User LastEditedUser { get; set; }
 
-
-        public bool IsDeleted { get; set; }
+         
     }
 
     public abstract class BaseEntity : BaseEntity<Guid>

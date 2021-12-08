@@ -2,6 +2,7 @@
 {
     public interface IDataInitializer : IScopedDependency
     {
+        int order { get; set; }
         void InitializeData();
     }
 }
