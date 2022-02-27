@@ -28,6 +28,7 @@ namespace Lookif.Layers.Core.Infrastructure.Base
 
         #region ... Projection ...
         IQueryable<T> GetAll();
+        Task<List<T>> GetAll(CancellationToken cancellationToken);
         Task<T> GetByIdAsync(J id, CancellationToken cancellationToken);
         Task<List<T>> GetAllByCondition(Expression<Func<T, bool>> condition, CancellationToken cancellationToken);
         IQueryable<T> QueryByCondition(Expression<Func<T, bool>> condition);
