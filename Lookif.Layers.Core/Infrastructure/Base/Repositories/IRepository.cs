@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Lookif.Layers.Core.MainCore.Base;
-using Microsoft.EntityFrameworkCore; 
+using Microsoft.EntityFrameworkCore;
 
 namespace Lookif.Layers.Core.Infrastructure.Base.Repositories
 {
@@ -14,6 +14,12 @@ namespace Lookif.Layers.Core.Infrastructure.Base.Repositories
         DbSet<TEntity> Entities { get; }
         IQueryable<TEntity> Table { get; }
         IQueryable<TEntity> TableNoTracking { get; }
+        IQueryable<TEntity> GetTemporal();
+        Task<List<TEntity>> GetTemporal(CancellationToken cancellationToken);
+
+
+
+
         ValueTask<TEntity> GetByIdAsync(CancellationToken cancellationToken, params object[] ids);
         Task AddAsync(TEntity entity, CancellationToken cancellationToken, bool saveNow = true);
         Task AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken, bool saveNow = true);
