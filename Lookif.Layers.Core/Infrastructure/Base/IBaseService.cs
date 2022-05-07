@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
 namespace Lookif.Layers.Core.Infrastructure.Base
 {
     public interface IBaseService<T, J>
@@ -27,6 +27,8 @@ namespace Lookif.Layers.Core.Infrastructure.Base
         #endregion
 
         #region ... Projection ...
+        IQueryable<T> GetTemporal<Temporal>() where Temporal : ITemporal, T;
+        Task<List<T>> GetTemporal<Temporal>(CancellationToken cancellationToken) where Temporal : ITemporal, T;
         IQueryable<T> GetAll();
         Task<List<T>> GetAll(CancellationToken cancellationToken);
         Task<T> GetByIdAsync(J id, CancellationToken cancellationToken);

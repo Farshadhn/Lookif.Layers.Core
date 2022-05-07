@@ -14,8 +14,8 @@ namespace Lookif.Layers.Core.Infrastructure.Base.Repositories
         DbSet<TEntity> Entities { get; }
         IQueryable<TEntity> Table { get; }
         IQueryable<TEntity> TableNoTracking { get; }
-        IQueryable<TEntity> GetTemporal();
-        Task<List<TEntity>> GetTemporal(CancellationToken cancellationToken);
+        IQueryable<TEntity> GetTemporal<Temporal>() where Temporal : ITemporal , TEntity;
+        Task<List<TEntity>> GetTemporal<Temporal>(CancellationToken cancellationToken) where Temporal : ITemporal, TEntity;
 
 
 
