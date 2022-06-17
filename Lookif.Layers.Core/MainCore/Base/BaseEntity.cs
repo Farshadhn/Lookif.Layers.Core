@@ -8,10 +8,10 @@ namespace Lookif.Layers.Core.MainCore.Base
     /// <summary>
     /// This is used to tag all entities
     /// </summary>
-    public interface IEntity
+    public interface IEntity : IEntity<Guid>
     {
     }
-    public interface IEntity<TKey> : IEntity
+    public interface IEntity<TKey>
     {
         public TKey Id { get; set; }
         public DateTime LastEditedDateTime { get; set; } //The time that last change is happened

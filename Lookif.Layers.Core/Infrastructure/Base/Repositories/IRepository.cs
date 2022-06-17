@@ -9,12 +9,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Lookif.Layers.Core.Infrastructure.Base.Repositories
 {
-    public interface IRepository<TEntity> where TEntity : class, IEntity
+
+    public interface IRepository<TEntity> : IRepository<TEntity, Guid>
+        where TEntity : class, IEntity<Guid>
+       
+    {
+    }
+
+
+    public interface IRepository<TEntity, Tkey> where TEntity : class, IEntity<Tkey>
     {
         DbSet<TEntity> Entities { get; }
         IQueryable<TEntity> Table { get; }
         IQueryable<TEntity> TableNoTracking { get; }
-        IQueryable<TEntity> GetTemporal<Temporal>() where Temporal : ITemporal , TEntity;
+        IQueryable<TEntity> GetTemporal<Temporal>() where Temporal : ITemporal, TEntity;
         Task<List<TEntity>> GetTemporal<Temporal>(CancellationToken cancellationToken) where Temporal : ITemporal, TEntity;
 
 
