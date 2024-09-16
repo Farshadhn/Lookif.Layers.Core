@@ -1,13 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Lookif.Layers.Core.Enums
-{
-    public enum GenderType
-    {
-        [Display(Name = "مرد")]
-        Male = 1,
+namespace Lookif.Layers.Core.Enums;
 
-        [Display(Name = "زن")]
-        Female = 2
-    }
+public enum GenderType
+{
+    [Display(Name = "مرد")]
+    Male = 1,
+
+    [Display(Name = "زن")]
+    Female = 2
 }

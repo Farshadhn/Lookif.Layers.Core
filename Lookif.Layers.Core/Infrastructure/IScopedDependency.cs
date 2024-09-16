@@ -1,15 +1,14 @@
-﻿namespace Lookif.Layers.Core.Infrastructure.Base
+﻿namespace Lookif.Layers.Core.Infrastructure.Base;
+
+//just to mark
+public interface IScopedDependency
 {
-    //just to mark
-    public interface IScopedDependency
-    {
-    }
+}
 
-    public interface ITransientDependency
-    {
-    }
+public interface ITransientDependency
+{
+}
 
-    public interface ISingletonDependency
-    {
-    }
+public interface ISingletonDependency
+{
 }

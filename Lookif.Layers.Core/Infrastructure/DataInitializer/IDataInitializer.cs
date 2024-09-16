@@ -1,8 +1,7 @@
-﻿namespace Lookif.Layers.Core.Infrastructure.Base.DataInitializer
+﻿namespace Lookif.Layers.Core.Infrastructure.Base.DataInitializer;
+
+public interface IDataInitializer : IScopedDependency
 {
-    public interface IDataInitializer : IScopedDependency
-    {
-        int order { get; set; }
-        void InitializeData();
-    }
+    int order { get; set; }
+    void InitializeData();
 }
