@@ -5,6 +5,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
+using Lookif.Layers.Core.Model;
+
 namespace Lookif.Layers.Core.Infrastructure.Base;
 
 public interface IBaseService<T, J>
@@ -22,7 +24,7 @@ public interface IBaseService<T, J>
     #endregion
 
     #region ... Delete ...
-    Task<T> DeleteAsync(T t, CancellationToken cancellationToken, bool save = true);
+    Task DeleteAsync(T t, CancellationToken cancellationToken, bool save = true);
 
     #endregion
 
@@ -30,7 +32,8 @@ public interface IBaseService<T, J>
     IQueryable<T> GetTemporal<Temporal>() where Temporal : ITemporal, T;
     Task<List<T>> GetTemporal<Temporal>(CancellationToken cancellationToken) where Temporal : ITemporal, T;
     IQueryable<T> GetAll();
-    Task<List<T>> GetAll(CancellationToken cancellationToken);
+    IQueryable<T> GetAll(GetAllFilter filter);
+    Task<List<T>> GetAll(GetAllFilter filter,CancellationToken cancellationToken);
     Task<T> GetByIdAsync(J id, CancellationToken cancellationToken);
     Task<List<T>> GetAllByCondition(Expression<Func<T, bool>> condition, CancellationToken cancellationToken);
     IQueryable<T> QueryByCondition(Expression<Func<T, bool>> condition);

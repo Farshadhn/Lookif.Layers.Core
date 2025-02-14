@@ -11,6 +11,6 @@ public interface IUserRelated
     Task<User> GetById(Guid id, CancellationToken cancellationToken);
 
     Task AddAsync(User user, string password, CancellationToken cancellationToken);
-    Task UpdateSecuirtyStampAsync(User user, CancellationToken cancellationToken);
+    Task UpdateSecurityStampAsync(User user, CancellationToken cancellationToken);
     Task UpdateLastLoginDateAsync(User user, CancellationToken cancellationToken);
 }

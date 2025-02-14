@@ -1,5 +1,4 @@
-﻿
-using Lookif.Layers.Core.MainCore.Identities;
+﻿using Lookif.Layers.Core.MainCore.Identities;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -32,9 +31,7 @@ public abstract class BaseEntity<TKey> : IEntity<TKey>
 
     public TKey Id { get; set; } 
     public DateTime LastEditedDateTime { get; set; }
-
-     
-
+ 
 
     public Guid? LastEditedUserId { get; set; }
     [ForeignKey(nameof(LastEditedUserId))]
