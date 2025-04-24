@@ -1,7 +1,9 @@
-﻿namespace Lookif.Layers.Core.Infrastructure.Base.DataInitializer;
+﻿using System.Threading.Tasks;
+
+namespace Lookif.Layers.Core.Infrastructure.Base.DataInitializer;
 
 public interface IDataInitializer : IScopedDependency
 {
     int order { get; set; }
-    void InitializeData();
+    Task InitializeDataAsync();
 }

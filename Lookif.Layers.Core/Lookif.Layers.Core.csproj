@@ -12,19 +12,19 @@
     <PackageReleaseNotes>Main Entities Related to "Lookif template"</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.1.0</Version>
+    <Version>3.2.0</Version>
     <Company>Lookif</Company>
-    <AssemblyVersion>3.1.0</AssemblyVersion>
-    <FileVersion>3.1.0</FileVersion>
+    <AssemblyVersion>3.2.0</AssemblyVersion>
+    <FileVersion>3.2.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="Lookif.Library.Common" Version="3.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.8" />
-    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.8" />
+    <PackageReference Include="Lookif.Library.Common" Version="3.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.13" />
   
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.13" />
   </ItemGroup>
 
   <ItemGroup>
