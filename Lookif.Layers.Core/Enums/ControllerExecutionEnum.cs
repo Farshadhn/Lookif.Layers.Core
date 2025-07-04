@@ -3,6 +3,6 @@ public enum ControllerExecutionEnum
 {
     Read,
     CreateAndRead,
-    CreateAdnReadAndUpdate,
+    CreateAndReadAndUpdate,
     Full
 }

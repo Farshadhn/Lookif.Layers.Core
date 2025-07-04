@@ -4,6 +4,6 @@ namespace Lookif.Layers.Core.Infrastructure.Base.DataInitializer;
 
 public interface IDataInitializer : IScopedDependency
 {
-    int order { get; set; }
+    int Order { get; set; }
     Task InitializeDataAsync();
 }
