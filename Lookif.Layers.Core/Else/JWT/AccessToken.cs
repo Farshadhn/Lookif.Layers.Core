@@ -17,6 +17,6 @@ public class AccessToken
     {
         access_token = new JwtSecurityTokenHandler().WriteToken(securityToken);
         token_type = "Bearer";
-        expires_in = (int)(securityToken.ValidTo - DateTime.UtcNow).TotalSeconds;
+        expires_in = (int)(securityToken.ValidTo - DateTime.Now).TotalSeconds;
     }
 }

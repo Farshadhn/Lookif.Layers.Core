@@ -1,15 +1,12 @@
 ﻿using Lookif.Layers.Core.Enums;
 using Lookif.Layers.Core.MainCore.Base;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lookif.Layers.Core.MainCore.Identities;
 
-public  class User : IdentityUser<Guid>, IEntity
+public  class User : IdentityUser<Guid>, IEntity<Guid>
 {
     public User()
     {
@@ -35,10 +32,8 @@ public  class User : IdentityUser<Guid>, IEntity
  
   
 
-
-    public Guid? LastEditedUserId { get; set; }
-    public User LastEditedUser { get; set; }
-    public DateTime LastEditedDateTime { get; set; }
+     
+    public DateTime LastEditedDateTime { get; set; } = DateTime.Now;
 
 }
 

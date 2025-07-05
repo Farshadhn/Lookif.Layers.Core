@@ -1,10 +1,9 @@
-﻿using Lookif.Layers.Core.Else.JWT;
-using Lookif.Layers.Core.MainCore.Identities;
+﻿using Lookif.Layers.Core.Else.JWT; 
 using System.Threading.Tasks; 
 
 namespace Lookif.Layers.Core.Infrastructure.Base;
 
-public interface IJwtService
+public interface IJwtService<TUser>
 {
-    Task<AccessToken> GenerateAsync(User user);
+    Task<AccessToken> GenerateAsync(TUser user);
 }

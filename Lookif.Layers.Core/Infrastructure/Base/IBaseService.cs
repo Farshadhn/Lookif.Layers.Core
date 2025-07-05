@@ -40,3 +40,8 @@ public interface IBaseService<T, J>
     Task<T> ExistAny(Expression<Func<T, bool>> condition, CancellationToken cancellationToken);
     #endregion
 }
+public interface IBaseService<T> : IBaseService<T,Guid>
+    where T : class, IEntity<Guid>
+{ 
+
+}
