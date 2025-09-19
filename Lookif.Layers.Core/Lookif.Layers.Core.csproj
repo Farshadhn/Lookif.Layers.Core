@@ -1,34 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <PrivateAssets>all</PrivateAssets>
-    <TargetFramework>net8.0</TargetFramework>
-    <Authors>Farshad</Authors>
-    <Product>Main Entities Related to "Lookif template"</Product>
-    <Description>Main Entities Related to "Lookif template".
-</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/Farshadhn/Lookif.Layers.Core</RepositoryUrl>
-    <PackageReleaseNotes>Main Entities Related to "Lookif template"</PackageReleaseNotes>
-    <NeutralLanguage>en</NeutralLanguage>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>4.0.0</Version>
-    <Company>Lookif</Company>
-    <AssemblyVersion>4.0.0</AssemblyVersion>
-    <FileVersion>4.0.0</FileVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<PrivateAssets>all</PrivateAssets>
+		<TargetFramework>net8.0</TargetFramework>
+		<Authors>Farshad</Authors>
+		<Product>Main Entities Related to "Lookif template"</Product>
+		<Description>
+			Main Entities Related to "Lookif template".
+		</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/Farshadhn/Lookif.Layers.Core</RepositoryUrl>
+		<PackageReleaseNotes>Main Entities Related to "Lookif template"</PackageReleaseNotes>
+		<NeutralLanguage>en</NeutralLanguage>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>4.0.0</Version>
+		<Company>Lookif</Company>
+		<AssemblyVersion>4.0.0</AssemblyVersion>
+		<FileVersion>4.0.0</FileVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Lookif.Library.Common" Version="3.2.1" />
-    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.13" />
-    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.13" />
-  
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.13" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Else\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Else\" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
+
+		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.13" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.13" />
+		<ProjectReference Include="..\..\Lookif.Library.Common\Lookif.Common\Lookif.Library.Common.csproj" />
+	</ItemGroup>
 
 </Project>
