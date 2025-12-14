@@ -56,4 +56,5 @@ public interface IRepository<TEntity, Tkey> where TEntity : class, IEntity<Tkey>
 
     void LoadReference<TProperty>(TEntity entity, Expression<Func<TEntity, TProperty>> referenceProperty)
         where TProperty : class;
+    Task SaveChangesAsync(CancellationToken cancellationToken);
 }

@@ -38,6 +38,8 @@ public interface IBaseService<T, J>
     Task<List<T>> GetAllByCondition(Expression<Func<T, bool>> condition, CancellationToken cancellationToken);
     IQueryable<T> QueryByCondition(Expression<Func<T, bool>> condition);
     Task<T> ExistAny(Expression<Func<T, bool>> condition, CancellationToken cancellationToken);
+    Task DeleteRangeAsync(List<T> t, CancellationToken cancellationToken, bool save = true);
+    Task SaveChangesAsync(CancellationToken cancellationToken);
     #endregion
 }
 public interface IBaseService<T> : IBaseService<T,Guid>

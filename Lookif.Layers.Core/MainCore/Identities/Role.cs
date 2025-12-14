@@ -10,6 +10,7 @@ public class Role : IdentityRole<Guid>, IEntity
 { 
     public string Description { get; set; }
     public DateTime LastEditedDateTime { get; set; } = DateTime.Now;
+    public Guid LastEditedUserId { get; set; } 
 }
 
 public class RoleConfiguration : IEntityTypeConfiguration<Role>

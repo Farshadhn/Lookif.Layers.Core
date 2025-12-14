@@ -34,7 +34,7 @@ public  class User : IdentityUser<Guid>, IEntity<Guid>
 
      
     public DateTime LastEditedDateTime { get; set; } = DateTime.Now;
-
+    public Guid LastEditedUserId { get; set; }
 }
 
 
